@@ -98,6 +98,24 @@ p, a, ul, ol {
   margin-top:35px;
 }
 
+/* Fake the appearance of a link for users */
+#chaps > li {
+  color:blue;
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+/* Styles are inherited from the parent because I'm too lazy to deal with element positioning.
+/* The best way to fix this is by setting the child elements as absolute and repositioning.
+/* Maybe I'll get back to it someday...maybe not.
+/* Most of these items will be links anyways, so it won't really matter in the long run. */
+.assignments li {
+  color:black;
+  /*text-decoration: none !important;*/
+  cursor:default;
+}
+
+/* ====== MENU ACTION ==== */
 .hide {
   display:none;
 }
