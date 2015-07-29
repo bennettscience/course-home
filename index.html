@@ -42,7 +42,10 @@
     </div>
     <script type="text/javascript">
       $("#chaps > li").click(function() {
-        $(this).find("ul.assignments").removeClass('hide');
+        $(this).find("ul.assignments").toggleClass('hide');
+      });
+      $("ul.assignments > li").click(function(e) {
+        e.stopPropagation();
       });
     </script>
   </body>
