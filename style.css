@@ -103,7 +103,6 @@ p, a, ul, ol {
 /* Fake the appearance of a link for users */
 #chaps > li {
   color:blue;
-  text-decoration:underline;
   cursor:pointer;
 }
 
@@ -122,17 +121,16 @@ p, a, ul, ol {
   display:none;
 }
 
+#remind-link {
+	color:inherit;
+	text-decoration: underline;
+}
+
 #remind-wrap {
 	border:1px solid black;
 	position:relative;
+	margin-left: 25px;
 	padding:10px;
-	height:35px;
-	text-decoration:none;
-}
-
-#remind {
-	position:absolute;
-	color:#000;
-	top:50%;
-	transform: translateY(-50%);
+	height:auto;
+	color: #000;
 }
