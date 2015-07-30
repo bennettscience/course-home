@@ -121,12 +121,7 @@ p, a, ul, ol {
   display:none;
 }
 
-#remind-link {
-	color:inherit;
-	text-decoration: underline;
-}
-
-#remind-wrap {
+.prompt {
 	border:1px solid black;
 	position:relative;
 	margin-left: 25px;

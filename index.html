@@ -26,16 +26,21 @@
               <li>Documents
                 <ul class="assignments hide">
                   <li><a href="https://docs.google.com/document/d/19N_p9I7IQBXLkA2NiYh38Nk6cTwbEFMv6uU9geNDyYg/edit">Course information</a></li>
-                  <li id="remind-link">Remind text setup</li>
-                  <div id="remind-wrap" class="hide">
-                    <p>To sign up for text message reminders via Remind, send a text with <b>@bennetticp</b> to <b>81010</b>.</p>
-                  </div>
+                  <li>Remind text setup
+                    <div class="prompt hide">
+                      <p>To sign up for text message reminders via Remind, send a text with <b>@bennetticp</b> to <b>81010</b>.</p>
+                    </div>
+                  </li>
                 </ul>
               </li>
-              <li>Learning to Ask Questions
+              <li>Measurement of Matter
                 <ul class="assignments hide">
-                  <li>One</li>
-                  <li>Two</li>
+                  <li>Standards sheet</li>
+                  <li>Writing 1
+                    <div class="prompt hide">
+                      <p>Writing prompt 1</p>
+                    </div>
+                  </li>
                 </ul>
               </li>
               <li>Motion
@@ -99,18 +104,22 @@
       </div>
     </div>
     <script type="text/javascript">
+    // Show the assignments below each chapter
       $("#chaps > li").click(function() {
         $(this).find("ul.assignments").toggleClass('hide');
       });
       $("ul.assignments > li").click(function(e) {
         e.stopPropagation();
       });
-      $("#remind-link").click(function() {
-        $("#remind-wrap").toggleClass('hide');
+
+      // Show any prompts hidden beneath a single li
+      $(".assignments > li").click(function() {
+        $(this).find("div.prompt").toggleClass('hide');
       })
-      $("#remind-wrap").click(function(e) {
+      $(".prompt").click(function(e) {
         e.stopPropagation();
       })
+
     </script>
   </body>
 </html>
