@@ -121,3 +121,18 @@ p, a, ul, ol {
 .hide {
   display:none;
 }
+
+#remind-wrap {
+	border:1px solid black;
+	position:relative;
+	padding:10px;
+	height:35px;
+	text-decoration:none;
+}
+
+#remind {
+	position:absolute;
+	color:#000;
+	top:50%;
+	transform: translateY(-50%);
+}
