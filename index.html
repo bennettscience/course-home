@@ -26,7 +26,7 @@
               <li>Documents
                 <ul class="assignment-type hide">
                   <li><a href="https://docs.google.com/document/d/19N_p9I7IQBXLkA2NiYh38Nk6cTwbEFMv6uU9geNDyYg/edit">Course information</a></li>
-                  <li>Remind text setup
+                  <li class="assignments">Remind text setup
                     <div class="prompt hide">
                       <p>To sign up for text message reminders via Remind, send a text with <b>@bennetticp</b> to <b>81010</b>.</p>
                     </div>
@@ -142,7 +142,7 @@
         $(this).find(".assignments > li").toggleClass('hide');
       })
       //Show any prompt div hidden beneath a single li and stop the click propagation
-      $(".assignments > li").click(function(e) {
+      $(".assignments > li, .assignments").click(function(e) {
         $(this).find(".prompt").toggleClass('hide');
         e.stopPropagation();
       })
