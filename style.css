@@ -41,13 +41,18 @@ ol {
   list-style-type: decimal;
   list-style-position: inside;
 }
-ul ul, ol ul {
-  list-style-type: circle;
+ol ul {
+  list-style-type: disc;
   list-style-position: inside;
   margin-left: 15px;
 }
+ul ul {
+	list-style-type: circle;
+	list-style-position: inside;
+	margin-left: 15px;
+}
 ol ol, ul ol {
-  list-style-type:decimal;
+  list-style-type:disc;
   list-style-position: inside;
   margin-left: 15px;
 }
@@ -116,7 +121,7 @@ li {
 
 li:hover { color:red; }
 
-/* ====== MENU ACTION ==== */
+/* ====== MENU STYLES AND ACTION ==== */
 .hide {
   display:none;
 }
