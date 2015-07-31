@@ -22,9 +22,9 @@
           <h2>Fall Semester</h2>
           <div class="course integrated" >
             <h3>Integrated Chemistry and Physics</h3>
-            <ol id="chaps">
+            <ol id="chaps" start="0">
               <li>Documents
-                <ul class="assignments hide">
+                <ul class="assignment-type hide">
                   <li><a href="https://docs.google.com/document/d/19N_p9I7IQBXLkA2NiYh38Nk6cTwbEFMv6uU9geNDyYg/edit">Course information</a></li>
                   <li>Remind text setup
                     <div class="prompt hide">
@@ -34,35 +34,46 @@
                 </ul>
               </li>
               <li>Measurement of Matter
-                <ul class="assignments hide">
-                  <li>Standards sheet</li>
-                  <li>Writing 1
-                    <div class="prompt hide">
-                      <p>Writing prompt 1</p>
-                    </div>
-                  </li>
+                <ul class="assignment-type hide">
+                  <li>Writing Assignments
+                    <ul class="assignments">
+                      <li class="hide">Writing 1
+                        <div class="prompt hide">
+                          <p>Writing prompt 1</p>
+                        </div>
+                      </li>
+                      <li class="hide">Writing 2
+                        <div class="prompt hide">
+                          <p>
+                            Writing prompt 2
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  <li><a href="https://docs.google.com/document/d/19l6HXhLurGDimaN_lXD8lrYkbjvLUy3iTNYaJqDcySM/edit">Notes 1: Graphing</a></li>
+                  <li><a href="https://docs.google.com/document/d/1cUr8AQpFC5p7tlIwz-TmiijQ_1NESdV1acxETa0Y-1I/edit">Notes 2: Variables</a></li>
                 </ul>
               </li>
-              <li>Motion
-                <ul class="assignments hide">
+              <li class="hide">Motion
+                <ul class="assignment-type hide">
                   <li>One</li>
                   <li>Two</li>
                 </ul>
               </li>
-              <li>The Forces
-                <ul class="assignments hide">
+              <li class="hide">The Forces
+                <ul class="assignment-type hide">
                   <li>One</li>
                   <li>Two</li>
                 </ul>
               </li>
-              <li>Energy and matter
-                <ul class="assignments hide">
+              <li class="hide">Energy and matter
+                <ul class="assignment-type hide">
                   <li>One</li>
                   <li>Two</li>
                 </ul>
               </li>
-              <li>Electricity
-                <ul class="assignments hide">
+              <li class="hide">Electricity
+                <ul class="assignment-type hide">
                   <li>One</li>
                   <li>Two</li>
                 </ul>
@@ -70,31 +81,32 @@
             </ol>
           </div> <!-- /Integrated course -->
         </div> <!-- /Fall semester -->
+        
         <div class="semester hide" id="spring">
           <h2>Spring Semester</h2>
           <div class="course integrated" >
             <h3>Integrated Chemistry and Physics</h3>
             <ol id="chaps">
               <li>Physical and Chemical Properties
-                <ul class="assignments hide">
+                <ul class="assignment-type hide">
                   <li>One</li>
                   <li>Two</li>
                 </ul>
               </li>
               <li>Chemical and Physical Changes
-                <ul class="assignments hide">
+                <ul class="assignment-type hide">
                   <li>One</li>
                   <li>Two</li>
                 </ul>
               </li>
               <li>Chemical Reactions
-                <ul class="assignments hide">
+                <ul class="assignment-type hide">
                   <li>One</li>
                   <li>Two</li>
                 </ul>
               </li>
               <li>Nuclear Reactions
-                <ul class="assignments hide">
+                <ul class="assignment-type hide">
                   <li>One</li>
                   <li>Two</li>
               </li>
@@ -104,17 +116,22 @@
       </div>
     </div>
     <script type="text/javascript">
-    // Show the assignments below each chapter
+    // Show the assignment-type below each chapter
       $("#chaps > li").click(function() {
-        $(this).find("ul.assignments").toggleClass('hide');
+        $(this).find("ul.assignment-type").toggleClass('hide');
       });
-      $("ul.assignments > li").click(function(e) {
+      $("ul.assignment-type > li").click(function(e) {
         e.stopPropagation();
       });
 
-      // Show any prompts hidden beneath a single li
-      $(".assignments > li").click(function() {
-        $(this).find("div.prompt").toggleClass('hide');
+      // Show individual assignments below each assignment-type
+      $("ul.assignment-type > li").click(function() {
+        $(this).find(".assignments > li").toggleClass('hide');
+      })
+      //Show any prompt div hidden beneath a single li and stop the click propagation
+      $(".assignments > li").click(function(e) {
+        $(this).find(".prompt").toggleClass('hide');
+        e.stopPropagation();
       })
       $(".prompt").click(function(e) {
         e.stopPropagation();
