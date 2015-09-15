@@ -124,6 +124,14 @@ li {
 li:hover { color:red; }
 
 /* ====== MENU STYLES AND ACTION ==== */
+#absent-notice {
+	margin-top:25px;
+	text-align: center;
+}
+#absent-notice a {
+	font-size:48px;
+	font-weight:700;
+}
 .hide {
   display:none;
 }
