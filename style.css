@@ -136,3 +136,10 @@ li:hover { color:red; }
 	height:auto;
 	color: #000;
 }
+
+.prompt img {
+	display: block;
+  padding: 15px;
+  width: 90%;
+  margin: 0 auto;
+}
