@@ -127,6 +127,7 @@ li:hover { color:red; }
 #notice {
 	margin-top:25px;
 	text-align: center;
+	position:relative;
 }
 .hide {
   display:none;
@@ -146,4 +147,10 @@ li:hover { color:red; }
   padding: 15px;
   width: 90%;
   margin: 0 auto;
+}
+
+@media (max-width: 460px) {
+	#notice iframe {
+		display: none !important;
+	}
 }
