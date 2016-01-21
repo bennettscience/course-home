@@ -32,7 +32,15 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1.5;
 	overflow-x:hidden;
-	background-color:#00ff00;
+	background-color:#F5F5F5;
+}
+body img {
+	position:fixed;
+	z-index:-10;
+	bottom:-10px;
+	right:-50px;
+	overflow-x: hidden;
+	opacity:0.3;
 }
 ul {
   list-style-type: disc;
@@ -102,6 +110,8 @@ p, a, ul, ol {
   margin:0 auto;
 	margin-top:35px;
 	margin-bottom:100px; 		/* allows for scroll space on mobile */
+	position:relative;
+	z-index:10;
 }
 
 .semester {
